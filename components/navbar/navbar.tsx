@@ -5,7 +5,7 @@ import NavbarIn from "./loggedInNavbar";
 import NavbarOut from "./loggedOutNavbar";
 
 export default function Navbar(): JSX.Element {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="flex items-center justify-between">
       <section className="flex">
