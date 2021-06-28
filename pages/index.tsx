@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import client from "../apolloClient";
 import { GetStaticProps } from "next";
+import Dashboard from "./dashboard";
 
 interface Iprops {
   category: unknown;
@@ -10,7 +11,9 @@ interface Iprops {
 function Home({ category, level }: Iprops): JSX.Element {
   return (
     <div>
-      <div>Hello Fiverr</div>
+      <div>
+        <Dashboard />
+      </div>
       <div>{category[1].name}</div>
       <div></div>
       <div>
