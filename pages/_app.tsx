@@ -1,8 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { ApolloProvider } from "@apollo/client";
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import client from "../apolloClient";
+
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  return (
+    <ApolloProvider client={client}>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  );
 }
 export default MyApp;
