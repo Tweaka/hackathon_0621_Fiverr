@@ -4,13 +4,22 @@ import { GetStaticProps } from "next";
 
 interface Iprops {
   category: unknown;
+  level: unknown;
 }
 
-function Home({ category }: Iprops): JSX.Element {
+function Home({ category, level }: Iprops): JSX.Element {
   return (
     <div>
       <div>Hello Fiverr</div>
-      <pre>{JSON.stringify(category, null, 2)}</pre>
+      <div>{category[1].name}</div>
+      <div></div>
+      <div>
+        <pre>{JSON.stringify(category, null, 2)}</pre>
+      </div>
+      <div>
+        <pre>{JSON.stringify(level, null, 2)}</pre>
+      </div>
+      <div></div>
     </div>
   );
 }
@@ -49,6 +58,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
   return {
     props: {
       category: data.category,
+      level: data.level,
     },
   };
 };
