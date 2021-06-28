@@ -3,14 +3,14 @@ import client from "../apolloClient";
 import { GetStaticProps } from "next";
 
 interface Iprops {
-  category: any;
+  category: unknown;
 }
 
 function Home({ category }: Iprops): JSX.Element {
   return (
     <div>
       <div>Hello Fiverr</div>
-      <div>{category}</div>
+      <div>{category[0]}</div>
     </div>
   );
 }
@@ -46,10 +46,10 @@ export const getStaticProps: GetStaticProps = async (_context) => {
       }
     `,
   });
-
+  console.log(data);
   return {
     props: {
-      category: data.category.name,
+      category: data.category,
     },
   };
 };
