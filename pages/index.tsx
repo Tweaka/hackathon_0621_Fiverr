@@ -10,7 +10,7 @@ function Home({ category }: Iprops): JSX.Element {
   return (
     <div>
       <div>Hello Fiverr</div>
-      <div>{category[0]}</div>
+      <pre>{JSON.stringify(category, null, 2)}</pre>
     </div>
   );
 }
@@ -34,7 +34,6 @@ export const getStaticProps: GetStaticProps = async (_context) => {
           id
           member_nbr
           name
-          price
         }
         user {
           category_id
