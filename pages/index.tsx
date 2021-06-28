@@ -1,5 +1,5 @@
-import Head from "next/head";
-
-export default function Home() {
+function Home() {
   return <div>Hello Fiverr</div>;
 }
+
+export default Home;
