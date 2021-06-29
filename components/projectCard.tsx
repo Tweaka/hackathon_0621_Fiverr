@@ -1,10 +1,25 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Card({ projects }) {
-  return projects.map((project, index) => {
-    return (
-      <div className="flex flex-wrap ">
-        <img className="rounded-tr-sm w-60 h-52" src={project.image}></img>
-        <h1> {project.name} </h1>
-      </div>
-    );
-  });
+  return (
+    <div className="flex flex-wrap justify-center ">
+      {projects.map((project, index) => {
+        return (
+          <div className="p-2" key={index}>
+            <Link href="">
+              <a>
+                <img
+                  src={project.image}
+                  alt="project picture"
+                  className="w-52 h-40 rounded-sm"
+                ></img>
+              </a>
+            </Link>
+            <h2>{project.name}</h2>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
