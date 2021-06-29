@@ -18,7 +18,7 @@ export default function CategoriesBar({ categories }: IProps): JSX.Element {
             );
           })}
           <div>
-            <Link href="/">
+            <Link href="/archive">
               <a className="font-bold text-blue-900">Archived Projects</a>
             </Link>
           </div>
