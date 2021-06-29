@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "../../public/images/fiverr-new3326.webp";
 import NavbarIn from "./loggedInNavbar";
 import NavbarOut from "./loggedOutNavbar";
+import Link from "next/link";
 
 export default function Navbar(): JSX.Element {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -10,7 +11,11 @@ export default function Navbar(): JSX.Element {
     <div className="flex items-center justify-between border-b-2 text-gray-600">
       <section className="flex">
         <div className="w-32 pl-6 mr-3">
-          <Image src={logo} alt="logo Fiverr" />
+          <Link href="/">
+            <a>
+              <Image src={logo} alt="logo Fiverr" />
+            </a>
+          </Link>
         </div>
         <div className="flex items-center">
           <input
