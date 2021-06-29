@@ -17,7 +17,7 @@ function Home({ category, level }: Iprops): JSX.Element {
       <div>
         <Dashboard />
         <SubBar />
-        <div>
+        <div className="bg-gray-100">
           <CategoriesBar category={category} />
         </div>
       </div>
