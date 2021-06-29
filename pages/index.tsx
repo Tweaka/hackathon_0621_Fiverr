@@ -19,7 +19,6 @@ function Home({ category, level }: Iprops): JSX.Element {
         <SubBar />
         <div>
           <CategoriesBar category={category} />
-          <PlusButton />
         </div>
       </div>
       <div>{category[1].name}</div>
