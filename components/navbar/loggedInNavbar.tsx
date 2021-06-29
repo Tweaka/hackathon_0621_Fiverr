@@ -3,7 +3,7 @@ import React from "react";
 export default function NavbarIn(): JSX.Element {
   return (
     <section>
-      <ul className="flex m-6">
+      <ul className="flex m-6 items-center">
         <li className="mx-2 text-Fiverr font-bold">Fiverr Pro</li>
         <li className="mx-2 text-blue-900 font-bold">Try Fiverr Buisness</li>
         <li className="mx-2">Explore</li>
