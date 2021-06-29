@@ -1,7 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Card({ projects }) {
+interface IProps {
+  projects: any;
+  categories: any;
+}
+
+export default function Card({ projects, categories }: IProps): JSX.Element {
   return (
     <div className="flex flex-wrap justify-center ">
       {projects.map((project, index) => {
