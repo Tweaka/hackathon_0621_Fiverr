@@ -2,8 +2,6 @@ import { gql } from "@apollo/client";
 import client from "../apolloClient";
 import { GetStaticProps } from "next";
 import Dashboard from "./dashboard";
-import SubBar from "../components/subBar";
-import CategoriesBar from "../components/categoriesBar";
 import Footer from "../components/footer";
 
 interface IProps {
@@ -16,20 +14,11 @@ function Home({ projects, categories, levels }: IProps): JSX.Element {
   return (
     <div>
       <div>
-        <Dashboard
-          projects={projects}
-          categories={categories}
-          levels={levels}
-        />
-      </div>
-      <div></div>
-      <div>
         <pre>{JSON.stringify(categories, null, 2)}</pre>
       </div>
       <div>
         <pre>{JSON.stringify(levels, null, 2)}</pre>
       </div>
-      <Footer />
     </div>
   );
 }
