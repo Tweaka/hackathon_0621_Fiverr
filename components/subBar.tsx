@@ -1,8 +1,4 @@
-interface IProps {
-  category: [];
-}
-
-export default function SubBar({ category }: IProps): JSX.Element {
+export default function SubBar(): JSX.Element {
   return (
     <div className="flex items-center justify-between border-b-2 p-2">
       <div className="text-gray-600 ml-20">

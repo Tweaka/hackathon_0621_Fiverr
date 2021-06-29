@@ -3,6 +3,8 @@ import client from "../apolloClient";
 import { GetStaticProps } from "next";
 import Dashboard from "./dashboard";
 import SubBar from "../components/subBar";
+import CategoriesBar from "../components/categoriesBar";
+import PlusButton from "../components/plusButton";
 
 interface Iprops {
   category: any;
@@ -14,7 +16,11 @@ function Home({ category, level }: Iprops): JSX.Element {
     <div>
       <div>
         <Dashboard />
-        <SubBar {...category} />
+        <SubBar />
+        <div>
+          <CategoriesBar category={category} />
+          <PlusButton />
+        </div>
       </div>
       <div>{category[1].name}</div>
       <div></div>
