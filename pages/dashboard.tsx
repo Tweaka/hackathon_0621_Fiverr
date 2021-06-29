@@ -19,10 +19,13 @@ export default function Dashboard({
     <div>
       <Navbar />
       <SubBar />
-      <div className="bg-gray-100">
-        <CategoriesBar categories={categories} />
-        <PlusButton />
-        <Card categories={categories} projects={projects} />
+      <div className="bg-gray-100 flex">
+        <div className="w-1/4">
+          <CategoriesBar categories={categories} />
+        </div>
+        <div className="w-3/4">
+          <Card categories={categories} projects={projects} />
+        </div>
       </div>
     </div>
   );

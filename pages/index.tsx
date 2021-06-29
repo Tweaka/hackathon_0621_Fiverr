@@ -53,6 +53,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
           member_nbr
           name
           image
+          description
         }
         user {
           category_id
