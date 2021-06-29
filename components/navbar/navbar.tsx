@@ -5,9 +5,9 @@ import NavbarIn from "./loggedInNavbar";
 import NavbarOut from "./loggedOutNavbar";
 
 export default function Navbar(): JSX.Element {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between border-b-2 text-gray-600">
       <section className="flex">
         <div className="w-32 pl-6 mr-3">
           <Image src={logo} alt="logo Fiverr" />

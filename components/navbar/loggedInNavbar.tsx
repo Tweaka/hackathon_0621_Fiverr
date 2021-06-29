@@ -11,7 +11,7 @@ export default function NavbarIn(): JSX.Element {
         <li className="mx-2">Lists</li>
         <li className="mx-2">Orders</li>
 
-        <li className="mx-2 bg-Fiverr px-2 text-white rounded-full">
+        <li className="mx-2 bg-Fiverr px-2 text-white font-bold rounded-full">
           <button>T</button>
         </li>
       </ul>
