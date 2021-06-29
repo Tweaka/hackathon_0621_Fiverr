@@ -5,21 +5,30 @@ import Dashboard from "./dashboard";
 import SubBar from "../components/subBar";
 
 interface Iprops {
-  category: any;
+  categories: any;
   level: unknown;
 }
 
-function Home({ category, level }: Iprops): JSX.Element {
+function Home({ categories, level }: Iprops): JSX.Element {
   return (
     <div>
       <div>
         <Dashboard />
-        <SubBar {...category} />
+        <SubBar {...categories} />
       </div>
-      <div>{category[1].name}</div>
+      <div className="flex">
+        {categories.map((category, index) => {
+          return (
+            <ul key={index}>
+              <li>{category.name}</li>
+            </ul>
+          );
+        })}
+      </div>
+      {console.log(categories)}
       <div></div>
       <div>
-        <pre>{JSON.stringify(category, null, 2)}</pre>
+        <pre>{JSON.stringify(categories, null, 2)}</pre>
       </div>
       <div>
         <pre>{JSON.stringify(level, null, 2)}</pre>
@@ -62,7 +71,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
   console.log(data);
   return {
     props: {
-      category: data.category,
+      categories: data.category,
       level: data.level,
     },
   };

@@ -1,13 +1,8 @@
 interface IProps {
-  category: [];
+  categories: any;
 }
 
-export default function SubBar({ category }: IProps): JSX.Element {
-  return (
-    <ul>
-      {category.map((category, index) => {
-        <li key={index}>{category["name"]}</li>; //fixed type never with ["name"] instead of .name
-      })}
-    </ul>
-  );
+export default function SubBar({ categories }: IProps): JSX.Element {
+  console.log(categories);
+  return <div></div>;
 }
