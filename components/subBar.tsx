@@ -16,7 +16,7 @@ export default function SubBar({ category }: IProps): JSX.Element {
           </li>
         </ul>
       </div>
-      <button className="bg-Fiverr text-white p-1 font-bold rounded-sm mr-20">
+      <button className="bg-Fiverr text-white p-1 px-3 font-bold rounded-sm mr-20">
         Start Selling
       </button>
     </div>
