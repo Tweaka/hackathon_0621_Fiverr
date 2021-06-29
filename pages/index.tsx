@@ -3,7 +3,7 @@ import client from "../apolloClient";
 import { GetStaticProps } from "next";
 import Dashboard from "./dashboard";
 import SubBar from "../components/subBar";
-import Card from "../components/projectCard";
+import CategoriesBar from "../components/categoriesBar";
 
 interface Iprops {
   projects: any;
@@ -16,9 +16,11 @@ function Home({ projects, category, level }: Iprops): JSX.Element {
     <div>
       <div>
         <Dashboard />
-        <SubBar {...category} />
+        <SubBar />
+        <div className="bg-gray-100">
+          <CategoriesBar category={category} />
+        </div>
       </div>
-      <Card projects={projects} />
       <div></div>
       <div>
         <pre>{JSON.stringify(category, null, 2)}</pre>

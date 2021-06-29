@@ -13,7 +13,7 @@ export default function NavbarOut(): JSX.Element {
         <li className="mx-2">
           <button>Sign In</button>
         </li>
-        <li className="mx-2 bg-Fiverr px-3 py-1 text-white rounded-sm">
+        <li className="mx-2 bg-Fiverr px-3 py-1 text-white rounded-sm w-8 h-8 flex items-center justify-center">
           <button>Join</button>
         </li>
       </ul>
