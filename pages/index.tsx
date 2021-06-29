@@ -3,20 +3,22 @@ import client from "../apolloClient";
 import { GetStaticProps } from "next";
 import Dashboard from "./dashboard";
 import SubBar from "../components/subBar";
+import Card from "../components/projectCard";
 
 interface Iprops {
+  projects: any;
   category: any;
   level: unknown;
 }
 
-function Home({ category, level }: Iprops): JSX.Element {
+function Home({ projects, category, level }: Iprops): JSX.Element {
   return (
     <div>
       <div>
         <Dashboard />
         <SubBar {...category} />
       </div>
-      <div>{category[1].name}</div>
+      <Card projects={projects} />
       <div></div>
       <div>
         <pre>{JSON.stringify(category, null, 2)}</pre>
@@ -48,6 +50,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
           id
           member_nbr
           name
+          image
         }
         user {
           category_id
@@ -64,6 +67,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
     props: {
       category: data.category,
       level: data.level,
+      projects: data.project,
     },
   };
 };
