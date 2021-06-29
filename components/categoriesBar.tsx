@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PlusButton from "./plusButton";
 
 interface IProps {
   category: any;
@@ -23,9 +22,6 @@ export default function CategoriesBar({ category }: IProps): JSX.Element {
               <a className="font-bold text-blue-900">Archived Projects</a>
             </Link>
           </div>
-        </div>
-        <div>
-          <PlusButton />
         </div>
       </div>
     </div>
