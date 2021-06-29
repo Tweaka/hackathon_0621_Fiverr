@@ -1,8 +1,6 @@
 import { gql } from "@apollo/client";
 import client from "../apolloClient";
 import { GetStaticProps } from "next";
-import Dashboard from "./dashboard";
-import Footer from "../components/footer";
 
 interface IProps {
   projects: any;
