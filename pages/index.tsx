@@ -4,6 +4,7 @@ import { GetStaticProps } from "next";
 import Dashboard from "./dashboard";
 import SubBar from "../components/subBar";
 import CategoriesBar from "../components/categoriesBar";
+import Footer from "../components/footer";
 
 interface IProps {
   projects: any;
@@ -28,7 +29,7 @@ function Home({ projects, categories, levels }: IProps): JSX.Element {
       <div>
         <pre>{JSON.stringify(levels, null, 2)}</pre>
       </div>
-      <div></div>
+      <Footer />
     </div>
   );
 }
