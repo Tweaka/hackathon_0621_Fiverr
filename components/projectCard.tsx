@@ -1,12 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
+import PlusButton from "../components/plusButton";
 
-export default function Card({ projects }) {
+interface IProps {
+  projects: any;
+  categories: any;
+}
+
+export default function Card({ projects, categories }: IProps): JSX.Element {
   return (
     <div className="flex flex-wrap justify-center ">
+      <PlusButton />
       {projects.map((project, index) => {
         return (
-          <div className="p-2" key={index}>
+          <div className="p-2 w-52" key={index}>
             <Link href="">
               <a>
                 <img
@@ -16,7 +22,8 @@ export default function Card({ projects }) {
                 ></img>
               </a>
             </Link>
-            <h2>{project.name}</h2>
+            <h2 className="text-center">{project.name}</h2>
+            <h2 className="text-center text-xs">{project.description}</h2>
           </div>
         );
       })}
