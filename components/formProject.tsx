@@ -1,10 +1,37 @@
+import { useCallback, useEffect } from "react";
+import { useRouter } from "next/router";
+
 export default function FormProject(): JSX.Element {
+  const router = useRouter();
+  const handleSubmit = useCallback((e) => {
+    e.preventDefault();
+
+    fetch("https://team-rocket.hasura.app/api/rest/post_one_project", {
+      method: "POST",
+      headers: {
+        "x-hasura-admin-secret":
+          "ekE4DqQ5WuGRA621j2f6l2UfH3pZyG4IuKoK2rC1Cf7jdgubPBrZlY1K3IluaqRC",
+      },
+      body: JSON.stringify({
+        /* Form data */
+      }),
+    }).then((res) => {
+      // Do a fast client-side transition to the already prefetched dashboard page
+      if (res.ok) router.push("/dashboard");
+    });
+  }, []);
+
+  useEffect(() => {
+    // Prefetch the dashboard page
+    router.prefetch("/dashboard");
+  }, []);
   return (
     <div className="flex flex-col items-center my-2">
       <form
         className="flex flex-col max-w-full max-h-full items-center"
         action="https://team-rocket.hasura.app/api/rest/post_one_project"
         method="POST"
+        onSubmit={handleSubmit}
       >
         <label className="text-gray-600 py-2 " htmlFor="">
           Name Project
