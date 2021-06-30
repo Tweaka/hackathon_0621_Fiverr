@@ -10,7 +10,7 @@ interface IProps {
   categories: any;
   levels: any;
 }
-export default function Dashboard({
+export default function Projects({
   projects,
   levels,
   categories,

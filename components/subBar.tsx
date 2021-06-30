@@ -5,16 +5,16 @@ export default function SubBar(): JSX.Element {
     <div className="flex items-center justify-between border-b-2 p-2">
       <div className="text-gray-600 ml-20">
         <ul className="flex">
-          <li className="mx-2">
-            <Link href="/dashboard">
-              <a>Dashboard </a>
-            </Link>
-          </li>
+          <li className="mx-2">Dashboard</li>
           <li className="mx-2">Contacts</li>
           <li className="mx-2">Inbox</li>
           <li className="mx-2">Settings</li>
           <li>
-            <button>Projects</button>
+            <Link href="/projects">
+              <a>
+                <button>Projects</button>
+              </a>
+            </Link>
           </li>
         </ul>
       </div>

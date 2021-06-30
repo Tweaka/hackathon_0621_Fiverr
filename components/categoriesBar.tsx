@@ -6,7 +6,7 @@ interface IProps {
 
 export default function CategoriesBar({ categories }: IProps): JSX.Element {
   return (
-    <div className="flex items-center justify-between border-b-2 p-2 ">
+    <div className="flex items-center justify-between p-2 border-r-2">
       <div className="flex text-gray-600 ml-10">
         <div className="w-full">
           <h2 className="font-bold">Categories </h2>
