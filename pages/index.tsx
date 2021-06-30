@@ -32,14 +32,11 @@ function Home({ projects, categories, levels }: IProps): JSX.Element {
               <li className="mx-2">NOTIFICATIONS</li>
             </ul>
           </div>
-          <div className="bg-white"> coucou je suis un projet </div>
+          <div className="bg-white">
+            {" "}
+            coucou je suis un projet hyper interessant
+          </div>
         </div>
-      </div>
-      <div>
-        <pre>{JSON.stringify(categories, null, 2)}</pre>
-      </div>
-      <div>
-        <pre>{JSON.stringify(levels, null, 2)}</pre>
       </div>
     </div>
   );
