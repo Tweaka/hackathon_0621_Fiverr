@@ -1,10 +1,14 @@
 import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 
-export default function OneProject({ projects, projectId }) {
+export default function OneProject({ projects, projectId, setIsOneProject }) {
   console.log(projectId);
   const router = useRouter();
   const { id } = router.query;
+  const handleClick = () => {
+    setIsOneProject((previousState) => !previousState);
+  };
+
   return (
     <div>
       <div className="flex items-center justify-center m-4">
@@ -38,6 +42,12 @@ export default function OneProject({ projects, projectId }) {
       <div className="flex items-center justify-center">
         <button className="m-2 bg-Fiverr px-3 py-1 text-white rounded-sm max-w-full font-bold h-8">
           Join
+        </button>
+        <button
+          className="m-2 bg-Fiverr px-3 py-1 text-white rounded-sm max-w-full font-bold h-8"
+          onClick={handleClick}
+        >
+          Cancel
         </button>
       </div>
     </div>

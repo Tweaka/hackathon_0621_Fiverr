@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function FormProject(): JSX.Element {
+export default function FormProject({ setIsActive }): JSX.Element {
   const router = useRouter();
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
@@ -25,6 +25,10 @@ export default function FormProject(): JSX.Element {
     // Prefetch the dashboard page
     router.prefetch("/dashboard");
   }, []);
+
+  const handleClick = () => {
+    setIsActive((previousState) => !previousState);
+  };
   return (
     <div className="flex flex-col items-center my-2">
       <form
@@ -64,6 +68,12 @@ export default function FormProject(): JSX.Element {
           className="m-2 bg-Fiverr px-3 py-1 text-white rounded-sm max-w-full font-bold h-8"
         >
           Validate
+        </button>
+        <button
+          onClick={handleClick}
+          className="m-2 bg-Fiverr px-3 py-1 text-white rounded-sm max-w-full font-bold h-8"
+        >
+          Cancel
         </button>
       </form>
     </div>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import PlusButton from "../components/plusButton";
 import FormProject from "./formProject";
 import { useState } from "react";
@@ -47,10 +46,14 @@ export default function Card({ projects }: IProps): JSX.Element {
             })}
           </div>
         ) : (
-          <FormProject />
+          <FormProject setIsActive={setIsActive} />
         )
       ) : (
-        <OneProject projects={projects} projectId={projectId} />
+        <OneProject
+          projects={projects}
+          projectId={projectId}
+          setIsOneProject={setIsOneProject}
+        />
       )}
     </div>
   );
