@@ -18,14 +18,14 @@ export default function Footer(): JSX.Element {
       </div>
       <div className="flex items-center justify-around text-gray-600">
         <div className="mx-4 text-gray-600">
-          <Image src={twitter} alt="icon twitter" width={32} height={32} />
+          <Image src={twitter} alt="icon twitter" width={24} height={24} />
         </div>
         <div className="mx-4 text-gray-600">
           <Image
             src={facebook}
             alt="icon facebook"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
             className="mx-4 text-gray-600"
           />
         </div>
@@ -33,8 +33,8 @@ export default function Footer(): JSX.Element {
           <Image
             src={linkedin}
             alt="icon linkedin"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
             className="px-4 text-gray-600"
           />
         </div>
@@ -42,8 +42,8 @@ export default function Footer(): JSX.Element {
           <Image
             src={pinterest}
             alt="icon pinterest"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
             className="px-4 text-gray-600"
           />
         </div>
@@ -51,8 +51,8 @@ export default function Footer(): JSX.Element {
           <Image
             src={instagram}
             alt="icon instagram"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
             className="px-4 text-gray-600"
           />
         </div>
